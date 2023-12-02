@@ -19,22 +19,28 @@ const pages = ["Home", "About me", "Contact me"];
 
 function Portfolio() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  // const [setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
+
+  const openLinkedInProfile = () => {
+  // Replace 'YOUR_LINKEDIN_PROFILE_URL' with the actual URL of the LinkedIn profile
+  window.open('https://www.linkedin.com/in/asma-ismail-306188259/', '_blank');
+};
+
 
   return (
     <AppBar position="static" style={{ backgroundColor: "#08F5F1" }}>
@@ -95,7 +101,7 @@ function Portfolio() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -112,55 +118,26 @@ function Portfolio() {
               textDecoration: "none",
             }}
           >
-            LOGO
+            Logo
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }} style={{textAlign: "center"}} className="flex bg-red-300 text-center">
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "black", display: "block" }}
               >
                 {page}
               </Button>
             ))}
           </Box>
-
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
           <Box sx={{ flexGrow: 0 }}>
-            <span className="flex flex-row gap-x-4">
-            <FaLinkedin />
-            <SiGmail />
-            <FaGithub />
-            <FaWhatsapp />
+            <span className="flex flex-row gap-x-4 cursor-pointer">
+
+      <FaLinkedin className="text-black" onClick={openLinkedInProfile} />
+            <SiGmail  className="text-black"/>
+            <FaGithub  className="text-black"/>
+            <FaWhatsapp  className="text-black"/>
             </span>
           </Box>
         </Toolbar>
