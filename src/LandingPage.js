@@ -9,38 +9,26 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import { FaLinkedin } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
 
 const pages = ["Home", "About me", "Contact me"];
 
 function Portfolio() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  // const [setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
+  // const openLinkedInProfile = () => {
+  //   window.open("https://www.linkedin.com/in/asma-ismail-306188259/", "_blank");
   // };
-
-  const openLinkedInProfile = () => {
-  // Replace 'YOUR_LINKEDIN_PROFILE_URL' with the actual URL of the LinkedIn profile
-  window.open('https://www.linkedin.com/in/asma-ismail-306188259/', '_blank');
-};
-
+  // const openGithub = () => {
+  //   window.open = ("https://github.com/asmaismail", "_blank");
+  // };
 
   return (
     <AppBar position="static" style={{ backgroundColor: "#08F5F1" }}>
@@ -70,6 +58,7 @@ function Portfolio() {
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
+              justify-content="flex-start"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
@@ -81,12 +70,12 @@ function Portfolio() {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "left",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "left",
+                horizontal: "right",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
@@ -96,12 +85,11 @@ function Portfolio() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="right">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -118,9 +106,13 @@ function Portfolio() {
               textDecoration: "none",
             }}
           >
-            Logo
+            Asma Ismail
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }} style={{textAlign: "center"}} className="flex bg-red-300 text-center">
+          <Box
+            sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+            style={{ textAlign: "right" }}
+            className="flex text-right content-end justify-end"
+          >
             {pages.map((page) => (
               <Button
                 key={page}
@@ -130,15 +122,6 @@ function Portfolio() {
                 {page}
               </Button>
             ))}
-          </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <span className="flex flex-row gap-x-4 cursor-pointer">
-
-      <FaLinkedin className="text-black" onClick={openLinkedInProfile} />
-            <SiGmail  className="text-black"/>
-            <FaGithub  className="text-black"/>
-            <FaWhatsapp  className="text-black"/>
-            </span>
           </Box>
         </Toolbar>
       </Container>
