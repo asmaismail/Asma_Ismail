@@ -31,7 +31,7 @@ function Portfolio() {
   // };
 
   return (
-    <AppBar position="static" style={{ backgroundColor: "#08F5F1" }}>
+    <AppBar position="static" style={{ backgroundColor: "#05C7AE" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

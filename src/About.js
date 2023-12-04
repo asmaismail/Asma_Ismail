@@ -8,21 +8,28 @@ const About = () => {
         <p className="text-[#05C7AE] w-full flex text-center justify-center font-bold text-4xl">
           About Me
         </p>
+      </div>
+      <div className="flex lg:flex-row flex-col gap-x-0 w-auto mx-8 mt-8">
+        <div className="lg:w-1/2 w-full">
+          <img src={img} alt="img" className="h-72 lg:ml-20 mx-2  rounded-lg" />
         </div>
-        <div className="flex lg:flex-row flex-col w-auto mt-8 bg-yellow-300">
-          <div className="lg:w-1/2 w-full">
-            <img src={img} alt="img" className="h-72 lg:ml-10  rounded-lg" />
-          </div>
-          <div className="lg:w-1/2 w-full bg-white">
-            <p className="text-[#05C7AE]">As a dedicated React.js web developer, I thrive on crafting dynamic and immersive digital experiences. 
-                Proficient in leveraging React.js to create responsive, high-performance web applications, I possess a strong 
-                foundation in front-end development. My expertise lies in translating design mock-ups into interactive interfaces, 
-                ensuring seamless user experiences across various platforms. With a keen eye for detail and a passion for clean,
-                 maintainable code, I contribute innovative solutions while collaborating within cross-functional teams. Continuously 
-                 staying abreast of emerging technologies and best practices, I am committed to delivering robust, scalable solutions that 
-                 exceed client expectations, driving impactful results in the ever-evolving realm of web development.</p>
-          </div>
+        <div className="lg:w-1/2 w-full">
+          <p className="text-white lg:mr-8 text-sm">
+            Hi! I'm Asma Ismail with having a 1.5 years of experince in
+            development of responsive <br />
+            and pixel perfect design from figma, having in depth knowledge in
+            React JS .
+          </p>
+          <span className="flex flex-row gap-x-2 mt-4">
+            <p className="text-[#05C7AE]">Name:</p>
+            <p className="text-white">Asma Ismail</p>
+          </span>
+          <span className="flex flex-row gap-x-2">
+            <p className="text-[#05C7AE]">Email:</p>
+            <p className="text-white">asmaismail202020@gmail.com</p>
+          </span>
         </div>
+      </div>
     </>
   );
 };
