@@ -29,7 +29,8 @@ const About = () => {
             <p className="text-white">asmaismail202020@gmail.com</p>
           </span>
           <a href={CV} download={CV}>
-            <button className="text-white bg-[#05C7AE] py-2 px-3 rounded-md mt-6 hover:shadow-2xl shadow:[#05C7AE]">
+          <button className="text-white bg-[#05C7AE] py-2 px-3 rounded-md mt-6 hover:shadow-white shadow-white transition duration-300 ease-in-out">
+            {/* <button className="text-white bg-[#05C7AE] py-2 px-3 rounded-md mt-6 hover:shadow-2xl shadow-[#bfefe8] transition duration-300 ease-in-out"> */}
               Download Resume
             </button>
           </a>
