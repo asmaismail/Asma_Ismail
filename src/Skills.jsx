@@ -31,8 +31,8 @@ const Skills = () => {
     <div className='w-auto mt-10'>
         <p className='text-[#05C7AE] flex text-center text-3xl justify-center font-bold'>Professional Skills</p>
         <div style={{ width: '300px', margin: '20px' }}>
-     <Typography id="range-slider" gutterBottom>
-         Range Slider
+     <Typography id="range-slider" gutterBottom className='text-white'>
+         HTML
        </Typography>
        <Slider
          value={value}

@@ -10,12 +10,12 @@ const About = () => {
           About Me
         </p>
       </div>
-      <div className="flex lg:flex-row flex-col gap-x-0 w-auto mx-8 mt-8">
+      <div className="flex lg:flex-row flex-col gap-x-0 w-auto  mt-8">
         <div className="lg:w-1/2 w-full">
-          <img src={img} alt="img" className="h-72 lg:ml-20 mx-2  rounded-lg" />
+          <img src={img} alt="img" className="h-72  rounded-lg" />
         </div>
         <div className="lg:w-1/2 w-full">
-          <p className="text-white lg:mr-24 text-sm flex text-justify lg:mt-0 mt-4">
+          <p className="text-white  text-sm flex text-justify lg:mt-0 mt-4">
             Hi! I'm Asma Ismail with having a 1.5 years of experince in
             development of responsive and pixel perfect design from figma,
             having in depth knowledge in React JS .

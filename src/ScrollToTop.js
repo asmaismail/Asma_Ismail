@@ -1,41 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { FaArrowUp } from 'react-icons/fa';
 
-function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false);
+import React from 'react'; 
+import { ScrollTop } from 'primereact/scrolltop';
 
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 150) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
-    return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    };
-  }, []);
-
-  return (
-    <button
-      className={`fixed bottom-4 -ml-24 bg-yellow-300 text-white p-2 rounded-full shadow-md hover:bg-blue hover:text-white focus:outline-none ${
-        isVisible ? 'visible' : 'invisible'
-      }`}
-      onClick={scrollToTop}
-    >
-      <FaArrowUp size={24} />
-    </button>
-  );
+export default function BasicDemo() {
+    return (
+        <div className="card flex flex-column align-items-center" style={{ height: '2000px' }}>
+            <p>Scroll down the page to display the ScrollTo component.</p>
+            <i className="pi pi-angle-down fadeout animation-duration-1000 animation-iteration-infinite" style={{ fontSize: '2rem' }}></i>
+            <ScrollTop />
+        </div>
+    );
 }
-
-export default ScrollToTop;
+        
