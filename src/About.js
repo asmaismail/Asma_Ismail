@@ -48,7 +48,7 @@ const About = () => {
                   src={Arrow}
                   alt="Arrow"
                 />
-                Download Resume
+                Download Resume here
               </span>
             </button>
           </a>
