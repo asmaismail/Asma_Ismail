@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import About from "./About";
 import Skills from "./Skills";
 import Work from './Work'
-// import Contact from './Contact';
+import Contact from './Contact';
 
 function App() {
   return (

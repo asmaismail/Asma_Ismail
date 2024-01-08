@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import img from "./Assets/about-me.webp";
 import CV from "./Assets/CV.pdf";
+import Arrow from "./Assets/arrow-down.gif";
 
 const About = () => {
+  const [isAnimating, setIsAnimating] = useState(false);
+  const handleAnimation = () => {
+    setIsAnimating(true);
+    // Your animation logic or any other functionality
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 3000); // Set the duration after which you want to stop the animation (in milliseconds)
+  };
   return (
     <>
       <div className="flex lg:flex-row flex-col w-auto mt-8">
@@ -29,9 +38,18 @@ const About = () => {
             <p className="text-white">asmaismail202020@gmail.com</p>
           </span>
           <a href={CV} download={CV}>
-          <button className="text-white bg-[#05C7AE] py-2 px-3 rounded-md mt-6 hover:shadow-white shadow-white transition duration-300 ease-in-out">
-            {/* <button className="text-white bg-[#05C7AE] py-2 px-3 rounded-md mt-6 hover:shadow-2xl shadow-[#bfefe8] transition duration-300 ease-in-out"> */}
-              Download Resume
+            <button
+              className="text-white bg-[#05C7AE] py-2 px-3 rounded-md mt-6 hover:shadow-white shadow-white transition duration-300 ease-in-out"
+              onClick={handleAnimation}
+            >
+              <span className="flex flex-row gap-x-2">
+                <img
+                  className={`h-5 mt-1 ${isAnimating ? "animate-spin" : ""}`}
+                  src={Arrow}
+                  alt="Arrow"
+                />
+                Download Resume
+              </span>
             </button>
           </a>
         </div>
