@@ -15,7 +15,7 @@ const About = () => {
   return (
     <>
       <div className="flex lg:flex-row flex-col w-auto mt-8">
-        <p className="text-[#05C7AE] w-full flex text-center justify-center font-bold text-4xl">
+        <p className="text-blue w-full flex text-center justify-center font-bold text-4xl">
           About Me
         </p>
       </div>
@@ -30,16 +30,16 @@ const About = () => {
             having in depth knowledge in React JS .
           </p>
           <span className="flex flex-row gap-x-2 mt-4">
-            <p className="text-[#05C7AE]">Name:</p>
+            <p className="text-blue">Name:</p>
             <p className="text-white">Asma Ismail</p>
           </span>
           <span className="flex flex-row gap-x-2">
-            <p className="text-[#05C7AE]">Email:</p>
+            <p className="text-blue">Email:</p>
             <p className="text-white">asmaismail202020@gmail.com</p>
           </span>
           <a href={CV} download={CV}>
             <button
-              className="text-white bg-[#05C7AE] py-2 px-3 rounded-md mt-6 hover:shadow-white shadow-white transition duration-300 ease-in-out"
+              className="text-white bg-blue py-2 px-3 rounded-md mt-6 hover:shadow-white shadow-white transition duration-300 ease-in-out"
               onClick={handleAnimation}
             >
               <span className="flex flex-row gap-x-2">

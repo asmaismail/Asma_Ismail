@@ -9,8 +9,7 @@ import HeroSection from "./HeroSection";
 
 function App() {
   return (
-    <div className="App pattern-dots pattern-gray-500 
-    pattern-size-24 pattern-opacity-10">
+    <div className="App">
       <Page />
       <div className="mx-20">
         <HeroSection/>

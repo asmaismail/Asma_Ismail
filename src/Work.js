@@ -3,11 +3,10 @@ import React from 'react'
 const Work = () => {
   return (
     <>
-    <div className='h-screen'>
+    <div className='h-screen bg-dots-pattern'>
       
-
-    </div>
-    </>
+    <p className='text-white'>gfhjahujwa</p>
+  </div>    </>
   )
 }
 

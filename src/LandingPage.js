@@ -34,7 +34,7 @@ function Portfolio() {
     <AppBar position="static" style={{ backgroundColor: "#05C7AE" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
+          <Typography className="font text-blue"
             variant="h6"
             noWrap
             component="a"
@@ -42,7 +42,7 @@ function Portfolio() {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
+              // fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "black",
@@ -90,7 +90,7 @@ function Portfolio() {
               ))}
             </Menu>
           </Box>
-          <Typography
+          <Typography className="font text-blue"
             variant="h5"
             noWrap
             component="a"
@@ -99,7 +99,8 @@ function Portfolio() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+              // fontFamily: "monospace",
+              // fontFamily: 'Dancing Script',
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
