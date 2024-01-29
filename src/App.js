@@ -5,14 +5,14 @@ import About from "./About";
 import Skills from "./Skills";
 import Work from './Work'
 // import Contact from './Contact';
-import HeroSection from "./HeroSection";
+// import HeroSection from "./HeroSection";
 
 function App() {
   return (
     <div className="App">
       <Page />
       <div className="mx-20">
-        <HeroSection/>
+        {/* <HeroSection/> */}
         <About />
         <Skills />
         <Work/>

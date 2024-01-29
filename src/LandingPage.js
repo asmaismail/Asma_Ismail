@@ -34,7 +34,8 @@ function Portfolio() {
     <AppBar position="static" style={{ backgroundColor: "#05C7AE" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography className="font text-blue"
+          <Typography
+            className="font text-blue"
             variant="h6"
             noWrap
             component="a"
@@ -90,7 +91,8 @@ function Portfolio() {
               ))}
             </Menu>
           </Box>
-          <Typography className="font text-blue"
+          <Typography
+            className="font text-blue"
             variant="h5"
             noWrap
             component="a"

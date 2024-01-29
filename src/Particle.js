@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Particle = () => {
-  return (
-    <div>Particle</div>
-  )
-}
+  return <div>Particle</div>;
+};
 
-export default Particle
+export default Particle;
